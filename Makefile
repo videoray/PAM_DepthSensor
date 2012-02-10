@@ -123,8 +123,8 @@ DEBUG = dwarf-2
 #     Each directory must be seperated by a space.
 #     Use forward slashes for directory separators.
 #     For a directory that has spaces, enclose it in quotes.
-EXTRAINCDIRS = ../pro4/inc ./inc
-
+#EXTRAINCDIRS = ../pro4/inc ./inc
+EXTRAINCDIRS = ./inc
 
 # Compiler flag to set the C Standard level.
 #     c89   = "ANSI" C
