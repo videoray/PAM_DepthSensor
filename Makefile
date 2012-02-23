@@ -81,15 +81,7 @@ OBJDIR = ./obj
 SRCDIR = ./src
 
 # List C source files here. (C dependencies are automatically generated.)
-SRC = $(TARGET).c \
-      led.c \
-      uart.c \
-	  spi.c \
-      sysclk.c \
-	  ringbuffer.c \
-	  device.c \
-	  depth.c 
-
+SRC = $(TARGET).c 
 		
 
 # List C++ source files here. (C dependencies are automatically generated.)
@@ -246,7 +238,7 @@ MATH_LIB = -lm
 #     Each directory must be seperated by a space.
 #     Use forward slashes for directory separators.
 #     For a directory that has spaces, enclose it in quotes.
-EXTRALIBDIRS = 
+EXTRALIBDIRS = ./lib
 
 
 
@@ -272,7 +264,7 @@ LDFLAGS = -Wl,-Map=$(TARGET).map,--cref
 LDFLAGS += $(EXTMEMOPTS)
 LDFLAGS += $(patsubst %,-L%,$(EXTRALIBDIRS))
 LDFLAGS += $(PRINTF_LIB) $(SCANF_LIB) $(MATH_LIB)
-#LDFLAGS += -lpro4
+LDFLAGS += -lpam
 #LDFLAGS += -T linker_script.x
 
 
